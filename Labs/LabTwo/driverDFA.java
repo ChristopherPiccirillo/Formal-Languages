@@ -22,7 +22,6 @@
  * This class acts as a driver for the testInput method in the ManWolf.java class
  * 
  */
-
 public class driverDFA {
 	
 	
