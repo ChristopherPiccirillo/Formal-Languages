@@ -9,8 +9,8 @@
  * This file contains a driver for the class ManWolf.  The testInput function is called on a string entered at the time this 
  * driver is called.  
  * 
- * Usage: javac driverDFA
- * 		: java driverDFA "Any Input Here"
+ * Usage1: javac driverDFA
+ * Usage2: java driverDFA "Any Input Here"
  * 
  * Valid Input: gncgwng
  * Invalid:     ggggggggg
@@ -25,6 +25,11 @@
 
 public class driverDFA {
 	
+	
+/** 
+ * Main Method to initiate the driver and ManWolf.javas method
+ * @param userInput in the command line
+ */
   public static void main(String Args[]){
 	  String[] input = Args;
 	  ManWolf.testInput(input[0]);
