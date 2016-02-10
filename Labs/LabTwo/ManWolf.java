@@ -1,24 +1,22 @@
 /**
  * file: ManWolf.java
- * author: Christopher Piccirillo
+ * @author Christopher Piccirillo
  * course: CMPT 440
  * assignment: Lab Two
  * due date: February 15, 2015
  * version: 1.0
  * 
- * This file contains the declaration of the SinglyLinkedList abstract data
- * type.
+ * This file contains the code to to validate a certain string for a
+ * correct solution to The Wolf, the Goat, and the Cabbage problem
+ * 
  */
-import java.util.Scanner;
 
 /** 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ * ManWolf.java
+ * This class contains a table-driven DFA approach to verifying a possible solution to 
+ * The Wolf, the Goat, and the Cabbage problem.
+ * A 2d array is used to represent the transition table states and a single for loop is processed around the string input
+ * to progress through the table.
  */
 
 
@@ -53,34 +51,29 @@ public class ManWolf {
 	
   }; 
 	
-  public static void testInput(){
-	  System.out.println("Please enter your string");
-	  Scanner sc = new Scanner(System.in);
-	     String in = sc.nextLine();
-	     sc.close();
-	     System.out.println(in);
-		
-		for(int i = 0; i<in.length(); i++) {
-			char c = in.charAt(i);
-			 int coOrds = 10;
-		        switch (c) {
-		            case 'g':  coOrds = 0;
-		                     break;
-		            case 'n':  coOrds = 1;
-		                     break;
-		            case 'c':  coOrds = 2;
-		                     break;
-		            case 'w':  coOrds = 3;
-		                     break;			          
+  public static void testInput(String userInput){
+	  if (userInput.isEmpty()){
+		  System.out.println("Please enter something next time! That is a not a solution");
+	  }
+	  for(int i = 0; i<userInput.length(); i++) {
+          char c = userInput.charAt(i);
+	      int coOrds = 10;
+		   switch (c) {
+		           case 'g':  coOrds = 0;
+		             break;
+		           case 'n':  coOrds = 1;
+		              break;
+		           case 'c':  coOrds = 2;
+		             break;
+		           case 'w':  coOrds = 3;
+		             break;			          
 		        }
 		     
 			try{
 			state = delta[state][coOrds];
-			//System.out.println("c = " + c );
-		//	System.out.println(state);
 			
-			if (i == in.length()-1 && state !=q9 && state !=q10){
-				System.out.println("Ran out of chars! Bad Input!");
+			if (i == userInput.length()-1 && state !=q9 && state !=q10){
+				System.out.println("Ran out of chars! Bad Input! That is not a solution.");
 				return;
 			}
 			if(state == q10) {
@@ -93,7 +86,7 @@ public class ManWolf {
 			}
 			
 			} catch(ArrayIndexOutOfBoundsException ex){
-				System.out.println("Invalid Input!");
+				System.out.println("Invalid Input! That is not a solution.");
 				return;
 			}
 		}
