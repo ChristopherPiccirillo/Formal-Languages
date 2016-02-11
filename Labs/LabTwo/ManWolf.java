@@ -21,7 +21,7 @@
 
 
 public class ManWolf {
-								     // The 10 possible states of the transition table as ints	
+                                     // The 10 possible states of the transition table as ints	
   private static final int q0 = 0;
   private static final int q1 = 1;
   private static final int q2 = 2;
@@ -39,8 +39,8 @@ public class ManWolf {
   
     // 2d array to represent a state transition table (Rows as states, columns as letters in this alphabet)
   static private int[][] delta = {
-	//  g   n   c   w  	   // each of these characters to the left correspond to a specific column
-	  					   // each of these characters to the right correspond to a specific row(state)
+    //  g   n   c   w      // each of these characters to the left correspond to a specific column
+                           // each of these characters to the right correspond to a specific row(state)
 	   {q1,q10,q10,q10},   // q0 
 	   {q0,q2,q10,q10},    // q1
 	   {q10,q1,q5,q3},     // q2
@@ -66,9 +66,9 @@ public class ManWolf {
  * 		   be notified of an incorrect answer as well.
  */	  
   public static void testInput(String userInput){
-	  for (int i = 0; i<userInput.length(); i++){											// Looping through entire string, checking for characters and 
-           char c = userInput.charAt(i);													// performing a table lookup for a transition (switch case)
-	       int columnNo = 10; 																// 10 is an invalid entry, for error purposes
+	  for (int i = 0; i<userInput.length(); i++){                                            // Looping through entire string, checking for characters and 
+           char c = userInput.charAt(i);                                                     // performing a table lookup for a transition (switch case)
+	       int columnNo = 10;                                                                // 10 is an invalid entry, for error purposes
 	       switch (c){
 		       case 'g':  columnNo = 0;
 		      	 		 break;
@@ -79,18 +79,18 @@ public class ManWolf {
 		       case 'w':  columnNo = 3;
 		                  break;			          
 		   }    
-		   try {			   																// Try Catch to Catch index out of bounds in our 2d array as an error message
+		   try {                                                                             // Try Catch to Catch index out of bounds in our 2d array as an error message
 			   state = delta[state][columnNo];
-			  // System.out.println(state); 												// UnComment to see transition path
-			   if (i == userInput.length()-1 && state !=q9 && state !=q10) {  				// Check for invalid solution
+			  // System.out.println(state);                                                  // UnComment to see transition path
+			   if (i == userInput.length()-1 && state !=q9 && state !=q10) {                 // Check for invalid solution
 				   System.out.println("That is not a solution.");
 				   return;
 			   }
-			   if (state == q10) {														    // Check for invalid solution
+			   if (state == q10) {                                                           // Check for invalid solution
 				   System.out.println("That is not a solution.");							
 				   return;
 			}
-			   if(state == q9 && i == userInput.length()-1) {  								// Check for valid solution	
+			   if(state == q9 && i == userInput.length()-1) {                                // Check for valid solution	
 				  System.out.println("That is a solution.");
 				  return;
 			   }
