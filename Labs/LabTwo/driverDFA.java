@@ -4,7 +4,7 @@
  * course: CMPT 440
  * assignment: Lab Two
  * due date: February 15, 2015
- * version: 1.1
+ * version: 1.3
  * 
  * This file contains a driver for the class ManWolf.  The testInput function is called on a string entered at the time this 
  * driver is called.  
@@ -32,7 +32,7 @@ public class driverDFA {
 		 System.out.println("Please enter your string! This is not a solution.");
 		 return;
 	  }
-	  ManWolf.testInput(Args[0]);
+	  ManWolf.testInput(Args[0].trim());
   }  
 }
 
