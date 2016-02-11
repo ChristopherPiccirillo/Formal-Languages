@@ -23,15 +23,16 @@
  * 
  */
 public class driverDFA {
-	
-	
 /** 
  * Main Method to initiate the driver and ManWolf.javas method
  * @param userInput in the command line
  */
   public static void main(String Args[]){
-	  String[] input = Args;
-	  ManWolf.testInput(input[0]);
+	  if(Args.length == 0){				// Simple check for a non empty string
+		 System.out.println("Please enter your string! This is not a solution.");
+		 return;
+	  }
+	  ManWolf.testInput(Args[0]);
   }  
 }
 
