@@ -21,7 +21,7 @@
 
 
 public class ManWolf {
-								     /* The 10 possible states of the transition table as ints	*/
+								     // The 10 possible states of the transition table as ints	
   private static final int q0 = 0;
   private static final int q1 = 1;
   private static final int q2 = 2;
