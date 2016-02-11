@@ -28,7 +28,7 @@ public class driverDFA {
  * @param userInput in the command line
  */
   public static void main(String Args[]){
-	  if(Args.length == 0){				// Simple check for a non empty string
+	  if(Args.length == 0){ // Simple check for a non empty string
 		 System.out.println("Please enter your string! This is not a solution.");
 		 return;
 	  }
