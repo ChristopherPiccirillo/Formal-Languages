@@ -1,0 +1,33 @@
+9 pts
+
+Correctness:
+
+- The program produces correct output.
+
+- The program produces output in the correct format.
+
+
+Style:
+
+- Incorrect indentation in both the driver and ManWolf files. Please use a
+  two-space indentation.
+
+- Good block comments
+
+- You are using TABs!!!
+
+- Code (or comments) go beyond 100 characters. Keep lines of code short.
+  Optimally 80 characters, but no more than 100.
+
+
+Efficiency and Other Comments:
+
+- Program is efficient as implemented.
+
+
+CSV files:
+
+- CSV files contain State-transition table and description of states.
+
+
+- Dr. Rivas
