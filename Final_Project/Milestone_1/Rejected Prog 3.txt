@@ -1,0 +1,5 @@
+var y
+y = " this program " 
+var x 
+x = " is broken "
+print ( y + x ) *- you cannot print id plus id -*

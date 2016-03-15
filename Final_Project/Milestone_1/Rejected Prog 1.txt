@@ -1,0 +1,3 @@
+print ( " Hello " ) *- simple print statement rejected by a capital letter -*
+varx *- simple var declaration missing a space -*
+x != 5 *- simple assignment statement using not equals which is not supported -*

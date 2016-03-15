@@ -1,0 +1,3 @@
+print ( " hello " ) *- simple print statement -*
+var x *- simple var declaration -*
+x = 5 *- simple assignment statement -*

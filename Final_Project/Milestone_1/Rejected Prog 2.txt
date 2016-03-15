@@ -1,0 +1,3 @@
+var x
+x = "hello" + 5
+print ( x + " this wont print because charlist plus int is not valid " ) 

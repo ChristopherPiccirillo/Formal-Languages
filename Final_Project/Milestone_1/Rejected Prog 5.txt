@@ -1,0 +1,7 @@
+var x 
+x = 5
+var y 
+y = x
+var c 
+c = y 
+print ( c + " value of c " ) *- this program looks fine but the comment is broken --*

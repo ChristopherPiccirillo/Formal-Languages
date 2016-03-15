@@ -1,0 +1,6 @@
+var y
+y = " formal languages " 
+var x 
+x = " is fun "
+print ( y )
+print ( x ) 

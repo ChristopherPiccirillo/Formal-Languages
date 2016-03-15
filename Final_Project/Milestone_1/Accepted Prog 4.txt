@@ -1,0 +1,5 @@
+var x
+var y 
+y = 2
+i = 5 + y
+print ( i )
