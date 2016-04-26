@@ -19,6 +19,10 @@ public class checkUserInput {
   static String styleString = "";  // Adds styles to the texts
   static String tempString = "";  // Adds add styles in front of HTML string
   static String textString = ""; // Adding literal text to a string
+  static String color1 = "#0099ff"; // color scheme editing
+  static String color2 = "orange"; // color scheme editing
+  static String color3 = "gray"; // color scheme editing
+  static String color4 = "green"; // color scheme editing
   static int starCount = 0; // Counting for Comments
   public static int columnNo = 100; // Start in Error State
 
@@ -157,7 +161,7 @@ public static void checkInput(String userInput){
              
          case 14:  // Print Success Case
              System.out.println("case 14");
-             htmlString+="<font color='blue'>" + textString + "</font>";
+             htmlString+="<font color='"+color1+"'>" + textString + "</font>";
              textString = "";
             // state = 0;
              break;
@@ -196,7 +200,7 @@ public static void checkInput(String userInput){
                   break;            
          case 23: System.out.println("case 23"); // Var Decl Case
          System.out.println("case 23");
-         htmlString+="<font color='green'> " + textString + "</font>";
+         htmlString+="<font color='"+color4+"'> " + textString + "</font>";
          textString = "";
         // state = 0;
                   break;
@@ -242,7 +246,7 @@ public static void checkInput(String userInput){
          case 27: System.out.println("case 27");
                   break;
          case 28: System.out.println("case 28");
-         htmlString+="<font color='orange'>" + textString + "</font>";
+         htmlString+="<font color='"+color2+"'>" + textString + "</font>";
          textString = "";
         // state = 0;
                   break;
@@ -251,7 +255,7 @@ public static void checkInput(String userInput){
          case 30: System.out.println("case 30");
                   break;
          case 31: System.out.println("case 31");
-         htmlString+="<font color='orange'>" + textString + "</font>";
+         htmlString+="<font color='"+color2+"'>" + textString + "</font>";
          textString = "";
         // state = 0;
                   break;
@@ -262,7 +266,7 @@ public static void checkInput(String userInput){
          case 34: System.out.println("case 34");
                   break;
          case 35: System.out.println("case 35"); // assign accept
-         htmlString+="<font color='orange'>" + textString + "</font>";
+         htmlString+="<font color='"+color2+"'>" + textString + "</font>";
          textString = "";
         // state = 0;
                   break;
@@ -291,7 +295,7 @@ public static void checkInput(String userInput){
          case 41: System.out.println("case 41"); // Comment Accept
          starCount++;
          System.out.println("case 41");
-         htmlString+="<font color='gray'>" + textString + "</font>";
+         htmlString+="<font color='"+color3+"'>" + textString + "</font>";
          textString = "";
         // state = 0;
                   break;

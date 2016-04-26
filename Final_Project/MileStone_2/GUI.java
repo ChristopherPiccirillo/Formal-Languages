@@ -144,8 +144,30 @@ public class GUI extends Application{
                 }
             }
         });
+        MenuItem light = new MenuItem("Light");
+        light.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+                System.out.println("LIGHT!!");
+                checkUserInput.color1 = "#0099ff";
+                checkUserInput.color2 = "orange";
+                checkUserInput.color3 = "gray";
+                checkUserInput.color4 = "green";
+            }
+        });
+        
+        
+        MenuItem dark = new MenuItem("Dark");
+        dark.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+                System.out.println("DARK!!");
+             checkUserInput.color1 = "#6600cc";
+             checkUserInput.color2 = "#990033";
+             checkUserInput.color3 = "#47476b";
+             checkUserInput.color4 = "#663300";
+            }
+        });
       	HTMLEditorx = new HTMLEditor();
-		primaryStage.setTitle("Christopher Piccirillo's IDE");
+        primaryStage.setTitle("Christopher Piccirillo's IDE");
 		runButton = new Button("Analyze!");
 		runtooltip.setText("Click here to analyze this snippet of code against our grammar.");
 		runButton.setTooltip(runtooltip);
@@ -156,6 +178,7 @@ public class GUI extends Application{
 		loadtooltip.setText("Click here choose a file to load into our editor.");
 		lineSep.setDisable(true);
 	    menuFile.getItems().addAll(load,sep,save);
+	    colorMenu.getItems().addAll(light,dark);
 	    menuBar.getMenus().addAll(menuFile,lineSep,colorMenu);
 	    menuBar.setStyle("-fx-background-color: #f0f0f5;");
 		// TODO Auto-generated method stub
