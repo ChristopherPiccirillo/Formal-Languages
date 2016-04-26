@@ -1,0 +1,26 @@
+*- this test program demonstrates proper and improper addition in our grammar -*
+
+var a
+
+var b
+
+a = 5
+
+
+b = 2
+
+*- proper addition -*
+
+a = 1 + b
+
+b = 4 + a
+
+print ( b )
+
+*- improper addition notice the underlined text in red to show error -*
+
+a = b + 1
+
+b = a + 6
+
+print ( b )

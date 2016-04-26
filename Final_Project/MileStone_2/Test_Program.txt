@@ -1,1 +1,14 @@
-*- test -*
+*- this test program should print out my full name with no errors -*
+var x
+
+var y
+
+x = " chris "
+
+y = " piccirillo "
+
+print ( x )
+
+print ( y )
+
+*- end program -*

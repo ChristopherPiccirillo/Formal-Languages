@@ -1,0 +1,17 @@
+*- final test program to test multiple statements on one line -*
+
+var x x = 5 print ( x ) print ( 1 + x ) print ( 1 + " hey " ) *- comment here too -*
+
+var y y = " dwd " print ( x )
+
+print ( x ) print ( y ) *- comment -* print ( 1 + x ) print ( 4 + y )
+
+print ( x ) print ( 1 + y ) var n var n n = " d " n = 5 print ( p ) print ( n )
+
+*- testing var decls with p and v -*
+
+var p var v p = " print " v = 5 print ( p ) print ( v )
+
+*- broken with good test cases -* *-broken-* *- good -* var x varx print ( x ) printx
+
+*- end test program cases -*

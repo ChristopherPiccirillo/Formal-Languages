@@ -223,7 +223,9 @@ public static void checkInput(String userInput){
          case 100: // Error state, underline text red
            tempString = textString;
            textString = "";
+           if (!tempString.equals (" ")){
            htmlString += "<span style='border-bottom: 1px solid #ff0000;'>" + tempString + "</span>";
+           }
            state = 0;
            break;       
     } // End Switch

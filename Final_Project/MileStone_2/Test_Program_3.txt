@@ -1,0 +1,37 @@
+*- this test program will demonstrate the basic grammar check for all statements -*
+
+*- correct -*
+
+var y
+
+y = 1
+
+var x
+
+x = " string "
+
+print ( x )
+
+print ( y )
+
+print ( 1 + x )
+
+print ( 2 + 2 )
+
+*- digit plus string is valid in our grammar -*
+
+print ( 1 + " string " )
+
+print ( 1 + 1 )
+
+*- iNcorrect -*
+
+vary
+
+xvar x
+
+print ( X )
+
+*- cannot add a string followed by an int -*
+
+print ( " string " + 1 )
