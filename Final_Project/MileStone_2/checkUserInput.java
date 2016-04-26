@@ -16,7 +16,6 @@ public class checkUserInput {
   static HashMap<Character, Integer> map = new HashMap<>(); // Hash map for all char values /
   public static int state = 0; // Current transition state
   static String htmlString = ""; // String to add styled text to. 
-  static String styleString = "";  // Adds styles to the texts
   static String tempString = "";  // Adds add styles in front of HTML string
   static String textString = ""; // Adding literal text to a string
   static String color1 = "#0099ff"; // color scheme editing
@@ -233,7 +232,6 @@ public static void checkInput(String userInput){
   GUI.HTMLEditorx.setHtmlText(htmlString); // Display newly created html  
   // Reset strings/states/
   htmlString = "";
-  styleString = "";
   tempString = "";
   textString = "";
   state = 0;
