@@ -188,24 +188,6 @@ import java.io.IOException;
     }
     });
     
-    // Event handler for our run button
-    runButton.setOnAction(new EventHandler<ActionEvent>() {
-    @Override
-    public void handle(ActionEvent event) {
-      tempHTML = HTMLEditorx.getHtmlText();
-      String x = tempHTML.replaceAll("<p>","@"); // temp string to hold HTML with our specified new line char
-      String y = x.replaceAll("&nbsp;"," "); // getting rid of nbsp, creates some formatting issues otherwise
-      checkUserInput.checkInput(HTMLtoText(y));
-    }
-    });
-    // Event handler for our clear button
-    clearButton.setOnAction(new EventHandler<ActionEvent>() {
-    @Override
-    public void handle(ActionEvent event) {
-      HTMLEditorx.setHtmlText(""); // Clear our HTML editor
-    }
-    });  
-    
     // CREATING OUR GUI (Positioning, adding nodes, text, color Etc)
     HTMLEditorx = new HTMLEditor(); // HTML editor
     primaryStage.setTitle("Christopher Piccirillo's IDE"); // Naming
@@ -231,6 +213,24 @@ import java.io.IOException;
     Scene scene = new Scene(layout, 600, 600);
     primaryStage.setScene(scene);
     primaryStage.show();		
+    
+    // Event handler for our run button
+    runButton.setOnAction(new EventHandler<ActionEvent>() {
+    @Override
+    public void handle(ActionEvent event) {
+      tempHTML = HTMLEditorx.getHtmlText();
+      String x = tempHTML.replaceAll("<p>","@"); // temp string to hold HTML with our specified new line char
+      String y = x.replaceAll("&nbsp;"," "); // getting rid of nbsp, creates some formatting issues otherwise
+      checkUserInput.checkInput(HTMLtoText(y));
+    }
+    });
+    // Event handler for our clear button
+    clearButton.setOnAction(new EventHandler<ActionEvent>() {
+    @Override
+    public void handle(ActionEvent event) {
+      HTMLEditorx.setHtmlText(""); // Clear our HTML editor
+    }
+    });  
   }	
   
 /**
