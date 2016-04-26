@@ -86,19 +86,19 @@ import java.io.IOException;
     fileChooser.setFileFilter(filter); // only text files allowed
     sb = new StringBuilder(); // String to build and read into our IDE
     if(fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){ // Checking for selected file 
-       // get the file 
-       java.io.File file = fileChooser.getSelectedFile();
-       Scanner input = new Scanner(file);
-       //read text from file
-       while(input.hasNext()){
-             sb.append(input.nextLine()); // Build our string with the selected text from file
-             sb.append("\n");
-	        }
-       input.close();
-       }	    
-      else {
-            sb.append("No File Was Selected");
-      }
+      // get the file 
+      java.io.File file = fileChooser.getSelectedFile();
+      Scanner input = new Scanner(file);
+      //read text from file
+      while(input.hasNext()){
+        sb.append(input.nextLine()); // Build our string with the selected text from file
+        sb.append("\n");
+	  }
+      input.close();
+    }	    
+    else {
+      sb.append("No File Was Selected");
+    }
   }
 /**
 * saveFile()
@@ -114,19 +114,19 @@ import java.io.IOException;
     fileChooser.setDialogTitle("Specify a file to save"); // prompt for file saving	     
     int userSelection = fileChooser.showSaveDialog(null); // catching user selection module	     
     if (userSelection == JFileChooser.APPROVE_OPTION) {
-        File fileToSave = fileChooser.getSelectedFile();
-        System.out.println("Save as file: " + fileToSave.getAbsolutePath());
-        filePath = fileToSave.getAbsolutePath();
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(new File(filePath + ".txt")))) {
-             String tempText = HTMLEditorx.getHtmlText();
-             String tempText2 = tempText.replaceAll("<p>", System.lineSeparator());
-             String tempText3 = HTMLtoText(tempText2);
-             bw.write(tempText3);
-             bw.close();
-         }
-         catch (FileNotFoundException ex) {
-                System.out.println("File not found");
-	            }
+      File fileToSave = fileChooser.getSelectedFile();
+      System.out.println("Save as file: " + fileToSave.getAbsolutePath());
+      filePath = fileToSave.getAbsolutePath();
+      try (BufferedWriter bw = new BufferedWriter(new FileWriter(new File(filePath + ".txt")))) {
+        String tempText = HTMLEditorx.getHtmlText();
+        String tempText2 = tempText.replaceAll("<p>", System.lineSeparator());
+        String tempText3 = HTMLtoText(tempText2);
+        bw.write(tempText3);
+        bw.close();
+       }
+       catch (FileNotFoundException ex) {
+         System.out.println("File not found");
+	   }
     }
   }	
 /**
@@ -144,7 +144,7 @@ import java.io.IOException;
     load.setOnAction(new EventHandler<ActionEvent>() {
     public void handle(ActionEvent t) {
       try{
-          getFile();
+        getFile();
       }
       catch(Exception e){
       }
@@ -158,10 +158,10 @@ import java.io.IOException;
     save.setOnAction(new EventHandler<ActionEvent>() {
     public void handle(ActionEvent t) {
       try {
-           saveFile();
+        saveFile();
       } 
       catch (IOException e) {
-             e.printStackTrace();
+        e.printStackTrace();
       }
     }
     });
