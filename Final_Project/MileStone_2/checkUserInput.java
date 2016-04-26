@@ -125,9 +125,9 @@ public static void checkInput(String userInput){
         break;   
         
       case 14:  // Print Success Case
-          htmlString+="<font color='"+color1+"'>" + textString + "</font>";
-          textString = "";
-          break;
+        htmlString+="<font color='"+color1+"'>" + textString + "</font>";
+        textString = "";
+        break;
           
       case 19: // v case
         try {
@@ -216,7 +216,6 @@ public static void checkInput(String userInput){
            
          case 41:  // Comment Accept
            starCount++;
-           System.out.println("case 41");
            htmlString+="<font color='"+color3+"'>" + textString + "</font>";
            textString = "";
            break;
